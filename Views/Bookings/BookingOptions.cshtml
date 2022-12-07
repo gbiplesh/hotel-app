@@ -1,0 +1,14 @@
+﻿@model HotelApp.Models.Bookings
+
+<p> hello!</p>
+
+@{
+    var booked = ( (Bookings) ViewData["BookingData"] ); 
+}
+
+<p>RoomType: @booked.RoomType</p>
+<p>FullName: @booked.FullName</p>
+<p>RoomQuantity: @booked.RoomQuantity</p>
+<p>Check-In Date: @booked.CheckIn</p>
+<p>Check-Out Date: @booked.CheckOut</p>
+<p>Price: @booked.Price</p>

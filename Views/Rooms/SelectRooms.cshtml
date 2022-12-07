@@ -1,0 +1,58 @@
+﻿@model HotelApp.Models.Rooms
+@{
+    ViewData["Title"] = "Select Rooms";
+}
+
+
+<h4>Select Rooms</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="RoomsSelected">
+            <div>
+
+                <dl class="row">
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.RoomType)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.RoomType)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Price)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Price)
+                    </dd>
+                </dl>
+
+                <dl class="row">
+                    <dt class="col-sm-4">
+                        <label name="CheckInDate" class="control-label">Check-In Date</label>
+                    </dt>
+                    <dd class="col-sm-8">
+                        
+                    </dd>
+                    <dt class="col-sm-4">
+                        <label name="CheckOutDate" class="control-label">Check-Out Date</label>
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Price)
+                    </dd>
+                </dl>
+
+            </div>
+            <div class="form-group">
+                <label for="RoomQuantity" class="control-label"></label>
+                <input name="RoomQuantity" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Select" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
